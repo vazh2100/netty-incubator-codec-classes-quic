@@ -24,6 +24,8 @@
 
   <properties>
     <javaModuleName>io.netty.incubator.codec.classes.quic</javaModuleName>
+    <netty.version>4.1.121.Final</netty.version>
+    <packaging.type>jar</packaging.type>
   </properties>
 
   <build>
@@ -44,7 +46,6 @@
                   <Automatic-Module-Name>${javaModuleName}</Automatic-Module-Name>
                 </manifestEntries>
                 <index>true</index>
-                <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
               </archive>
             </configuration>
           </execution>
@@ -57,36 +58,43 @@
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-common</artifactId>
+      <version>${netty.version}</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-buffer</artifactId>
+      <version>${netty.version}</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-codec</artifactId>
+      <version>${netty.version}</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-handler</artifactId>
+      <version>${netty.version}</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-transport</artifactId>
+      <version>${netty.version}</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-transport-classes-epoll</artifactId>
-      <!-- Let's mark as optional as it is not strictly needed -->
+      <version>${netty.version}</version>
       <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>org.jetbrains</groupId>
       <artifactId>annotations</artifactId>
+      <version>24.1.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.code.findbugs</groupId>
       <artifactId>jsr305</artifactId>
+      <version>3.0.2</version>
     </dependency>
   </dependencies>
 </project>
