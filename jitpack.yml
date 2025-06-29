@@ -1,2 +1,0 @@
-install:
-  - ./mvnw -B -ntp --file pom.xml -pl codec-classes-quic package -Dandroid
